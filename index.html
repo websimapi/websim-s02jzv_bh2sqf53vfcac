@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Chat Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "tmi.js": "https://esm.sh/tmi.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="connect-container">
+        <h1>Twitch Chat Game</h1>
+        <p>Enter a Twitch channel name to connect to its chat.</p>
+        <div class="input-group">
+            <input type="text" id="channel-input" placeholder="e.g., ninja">
+            <button id="connect-btn">Connect</button>
+        </div>
+    </div>
+
+    <div id="world-select-container" class="hidden">
+        <h1 id="world-select-title">Select a World</h1>
+        <div id="world-list"></div>
+        <div id="world-actions-container">
+            <div id="create-world-btn" class="world-item new-world">
+                <div class="plus-icon">+</div>
+                <p>Create New World</p>
+            </div>
+            <div id="import-world-btn" class="world-item new-world">
+                <div class="import-icon">📥</div>
+                <p>Import World</p>
+            </div>
+        </div>
+
+        <div id="world-settings-container" class="hidden">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
